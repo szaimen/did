@@ -1,0 +1,24 @@
+name: what did I do last week?
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 14 * * 1'
+
+jobs:
+  work-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+      - name: Install did
+        run: |
+          sudo apt install python3-pip --no-install-recommends
+          pip install did
+          mkdir -p /home/runner/.did
+          cat ./did.config > /home/runner/.did/config
+      - name: Run did
+        run: |
+          did last week
+          exit 1
