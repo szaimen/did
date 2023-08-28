@@ -1,6 +1,6 @@
 # What is this?
 
-This project is preconfigured to allow to collect all public GitHub data about a specific user and create a PR out of it in order to use it in a work report.
+This project is preconfigured to allow to collect all public GitHub data about a specific user in order to use it in a work report.
 
 ## How to use this?
 
