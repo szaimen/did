@@ -15,7 +15,7 @@ jobs:
       - name: Install did
         run: |
           sudo apt install python3-pip --no-install-recommends
-          pip install did
+          pip install did --break-system-packages
           mkdir -p /home/runner/.did
           cat ./did.config > /home/runner/.did/config
       - name: Run did
