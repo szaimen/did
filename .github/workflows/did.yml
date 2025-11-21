@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Check out code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Install did
         run: |
           sudo apt install python3-pip libkrb5-dev --no-install-recommends
