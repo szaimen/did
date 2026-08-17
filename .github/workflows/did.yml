@@ -19,6 +19,10 @@ jobs:
           mkdir -p /home/runner/.did
           cat ./did.config > /home/runner/.did/config
       - name: Run did
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          echo "token = $GITHUB_TOKEN" >> /home/runner/.did/config
           did last week
+          # Fail to get a notification every time
           exit 1
